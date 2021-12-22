@@ -8,7 +8,7 @@ library(TTR)
 
 # Forecasting
 # reading the data
-bitcoin <- read.csv("/Users/johnhope/Desktop/2021 Skills Challenge/BitcoinHistoricalData.csv")
+bitcoin <- read.csv("BitcoinHistoricalData.csv")
 
 # changing date column to date object
 bitcoin$Date <- as.Date(bitcoin$Date, "%m/%d/%y")
@@ -53,7 +53,7 @@ library(reshape2)
 library(wordcloud)
 
 # Reading data
-tweets <- vroom::vroom("/Users/johnhope/Desktop/2021 Skills Challenge/BitcoinTweets.csv")
+tweets <- vroom::vroom("BitcoinTweets.csv")
 set.seed(2021) #replicabiility
 tweets <- sample_n(tweets, 10000) #sampling tweets for simplicity
 
